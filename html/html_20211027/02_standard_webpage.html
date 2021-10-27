@@ -187,6 +187,77 @@
         input:nth-of-type(2):checked~div:nth-of-type(2) {
             display: block;
         }
+
+        section.buttons {
+            overflow: hidden;
+        }
+
+        section.buttons>label {
+            display: block;
+            float: left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+        }
+
+        input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1) {
+            background-color: white;
+            color: black;
+        }
+
+        input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <style>
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            border: 1px solid black;
+            border-top: none;
+        }
+
+        .thumbnail {
+            float: left;
+        }
+
+        .description {
+            float: left;
+            margin-left: 10px;
+        }
+
+        .description>strong {
+            display: block;
+            width: 120px;
+        }
+
+        .description>strong+p {
+            width: 120px;
+        }
+
+        .description>strong,
+        .description>strong+p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <style>
+        #main_footer {
+            width: 960px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -226,7 +297,24 @@
                     nulla odio hic voluptas suscipit? Nam amet error libero, aspernatur numquam voluptate veniam
                     necessitatibus ratione voluptas sit, quos, delectus eligendi quibusdam reprehenderit magnam ut
                     labore pariatur quas enim dolore repudiandae modi obcaecati? Nisi sint omnis, optio, accusantium,
-                    vitae illo aspernatur repudiandae eveniet beatae temporibus qui obcaecati saepe.</p>
+                    vitae illo aspernatur repudiandae eveniet beatae temporibus qui obcaecati saepe. Lorem ipsum dolor,
+                    sit amet consectetur adipisicing elit. Labore quia doloribus pariatur, quo consequuntur consequatur
+                    amet dicta fugiat. Laboriosam repellat soluta, ipsum, vero iste consequatur quasi assumenda
+                    consectetur, suscipit at pariatur itaque obcaecati ducimus accusantium tenetur autem molestias.
+                    Officia est neque aliquam asperiores eveniet aperiam recusandae quia ut porro ea suscipit
+                    dignissimos voluptate mollitia, nulla, excepturi fuga praesentium cumque assumenda laborum? Corrupti
+                    saepe, laudantium atque id molestiae nobis modi neque possimus minima suscipit necessitatibus. Quasi
+                    sequi, eligendi quibusdam dolor repellat laboriosam officiis hic cupiditate odit fugiat placeat nam
+                    quas deserunt assumenda sint quae vero quisquam, neque illum beatae eos consequatur. Voluptate
+                    nostrum, assumenda nulla mollitia maiores dolorum minus saepe, ad doloremque libero minima
+                    inventore? Cupiditate voluptatum, nam quisquam commodi facilis temporibus minus facere aliquid eaque
+                    maiores, iste rem nemo numquam consectetur placeat quae perspiciatis. Quisquam vitae deserunt minus
+                    eum recusandae incidunt explicabo quibusdam. Nihil saepe a impedit corrupti voluptatibus distinctio
+                    accusantium earum, dolores fugiat? Cum tempora deserunt architecto voluptate nemo dicta ex
+                    accusantium tempore doloribus eum atque veritatis eos, voluptatum ipsam fugit voluptatem eaque,
+                    delectus maiores est eius vero. Fuga corporis aliquid, neque cum, reprehenderit excepturi quam eos
+                    maxime, numquam ratione incidunt at consequuntur est distinctio. Cumque quae inventore architecto!
+                </p>
             </article>
             <article class="main_article">
                 <h1>제목</h1>
@@ -262,18 +350,19 @@
                 <ul>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/1076/600/400" alt="">
+                                <img src="https://picsum.photos/id/1076/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>Second5</strong>
-                                <p>Hello</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut ullam itaque vitae
+                                    repudiandae, ducimus iusto unde error vero explicabo.</p>
                             </div>
 
                         </a>
                     </li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/237/600/400" alt="">
+                                <img src="https://picsum.photos/id/237/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>HTML5</strong>
@@ -284,7 +373,7 @@
                     </li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                                <img src="https://picsum.photos/id/684/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>HTML5</strong>
@@ -295,7 +384,7 @@
                     </li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                                <img src="https://picsum.photos/id/684/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>HTML5</strong>
@@ -311,7 +400,7 @@
                 <ul>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/1020/600/400" alt="">
+                                <img src="https://picsum.photos/id/1020/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>Second5</strong>
@@ -322,7 +411,7 @@
                     </li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                                <img src="https://picsum.photos/id/684/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>HTML5</strong>
@@ -333,7 +422,7 @@
                     </li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                                <img src="https://picsum.photos/id/684/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>HTML5</strong>
@@ -344,7 +433,7 @@
                     </li>
                     <li class="item"><a href="#">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/684/600/400" alt="">
+                                <img src="https://picsum.photos/id/684/45/45" alt="">
                             </div>
                             <div class="description">
                                 <strong>HTML5</strong>
@@ -358,7 +447,9 @@
             </div>
         </aside>
     </div>
-    <footer>
+    <footer id="main_footer">
+        <h3>HTML5+CSS Basic</h3>
+        <address>WebSite Layout Basic</address>
     </footer>
 
 </body>

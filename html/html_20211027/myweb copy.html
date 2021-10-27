@@ -186,7 +186,7 @@
             overflow: hidden;
         }
 
-        section.buttons>label {
+        section.buttons1>label {
             display: block;
             float: left;
             width: 190px;
@@ -194,25 +194,36 @@
             line-height: 30px;
             text-align: center;
             box-sizing: border-box;
-
             font-family: 'EliceDigitalBaeum_Regular';
             background-color: white;
             color: black;
-        }
-
-        section.buttons {
-            border-radius: 10px 10px 0px 0px;
+            border-radius: 10px 0px 0px 0px;
             border-bottom: 2px solid rgb(246, 237, 237);
-
         }
 
-
-        input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1) {
-            color: blue;
+        section.buttons2>label {
+            display: block;
+            float: left;
+            width: 190px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: 'EliceDigitalBaeum_Regular';
+            background-color: white;
+            color: black;
+            border-radius: 0px 10px 0px 0px;
+            border-bottom: 2px solid rgb(246, 237, 237);
         }
 
-        input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
+        input:nth-of-type(1):checked~section.buttons1>label {
             color: blue;
+            border-bottom-color: blue;
+        }
+
+        input:nth-of-type(2):checked~section.buttons2>label {
+            color: blue;
+            border-bottom-color: blue;
         }
     </style>
     <style>
@@ -229,20 +240,23 @@
 
         .thumbnail {
             float: left;
+            margin-left: 30px;
         }
 
         .description {
             float: left;
-            margin-left: 10px;
+            text-align: center;
+            font-family: 'EliceDigitalBaeum_Regular';
+            line-height: 50px;
         }
 
         .description>strong {
             display: block;
-            width: 120px;
+            width: 250px;
         }
 
         .description>strong+p {
-            width: 120px;
+            width: 250px;
         }
 
         .description>strong,
@@ -292,7 +306,7 @@
     </header>
     <div id="content">
         <section id="main_section">
-            <article class="main_article">
+            <article class="main_article" id="bit">
                 <h1><img width="30" height="30" src="BTC.png" alt=""> 비트코인</h1>
                 <p>비트코인은 최초로 구현된 디지털 자산입니다. 발행 및 유통을 관리하는 중앙권력이나 중간상인 없이, P2P 네트워크 기술을 이용하여 네트워크에 참여하는 사용자들이 주체적으로 화폐를
                     발행하고 이체내용을 공동으로 관리합니다. 이를 가능하게 한 블록체인 기술을 처음으로 코인에 도입한 것이 바로 비트코인입니다. <br> <br></p>
@@ -301,7 +315,7 @@
                     현재
                     유통시가총액과 코인의 가치가 가장 크고, 거래량 또한 안정적입니다. 이더리움이 빠르게 추격하고 있지만 아직은 가장 견고한 디지털 자산 이라고 볼 수 있습니다.</p>
             </article>
-            <article class="main_article">
+            <article class="main_article" id="eth">
                 <h1><img width="30px" height="30px" src="ETH.png" alt=""> 이더리움</h1>
                 <p>이더리움은 블록체인에 기초해 다양한 앱 개발을 지원하는 플랫폼이며, 여기서 사용되는 디지털 자산 또한 같은 이름으로 통용됩니다. <br> <br>1. 플랫폼: 이더리움은 블록체인을
                     활용한 모든 것을 프로그래밍할 수 있는 플랫폼입니다. 거래 기록뿐만 아니라 탈중앙화 앱(DAPP)들을 투명하게 운영할 수 있는 확장성을 제공합니다. 플랫폼은 프로그램된 계약을
@@ -310,7 +324,7 @@
                     기술 중 하나로 평가받는 분위기이며, 실제 '월드테크놀로지(The WTN) IT S/W' 부문에서 경쟁작인 마크 저커버그의 페이스북을 제치고 수상을 한 바 있습니다.
                 </p>
             </article>
-            <article class="main_article">
+            <article class="main_article" id="xrp"
                 <h1><img width="30px" height="30px" src="XRP.png" alt=""> 리플</h1>
                 <p>리플코인은 금융 거래를 위한 인터넷 프로토콜인 ‘리플 프로토콜’에서 사용되는 디지털 자산이자 기초 화폐입니다. 이 코인을 매개로 전 세계의 화폐를 몇 초 내로 송금할 수 있어
                     혁신적인 실시간 통화 거래가 가능합니다. '리플 프로토콜'이란 분산원장을 기반으로 한 ‘실시간 총액결제 시스템(RTS)’으로 국제결제시스템망(SWIFT)을 대체할 새로운 대안으로
@@ -322,7 +336,7 @@
                     있는 코인을 악용할 우려를 잠재우기 위해 암호화를 통해 보호된 조건부 날인 계정(escrow)에 리플을 넣어둔다고 합니다.
                 </p>
             </article>
-            <article class="main_article">
+            <article class="main_article" id="doge">
                 <h1><img width="30px" height="30px" src="DOGE.png" alt=""> 도지코인</h1>
                 <p>
                     처음에 "joke currency"라고 불리기도 하면서 장난처럼 시작한 도지코인은 일본 개인 시바 이누를 마스코트로 사용합니다. 이 시바견은 인터넷에서 재미로 사용되던 그림이며,
@@ -334,53 +348,50 @@
         <aside id="main_aside">
             <input id="first" type="radio" name="tab" checked="checked">
             <input id="second" type="radio" name="tab">
-            <section class="buttons">
+            <section class="buttons1">
                 <label for="first"><b>코인명</b></label>
+            </section>
+            <section class="buttons2">
                 <label for="second"><b>거래소</b></label>
             </section>
             <div class="tab_item">
                 <ul>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="#bit">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/1076/45/45" alt="">
+                                <img width="50px" height="50px" src="BTC.png" alt="">
                             </div>
                             <div class="description">
-                                <strong>Second5</strong>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut ullam itaque vitae
-                                    repudiandae, ducimus iusto unde error vero explicabo.</p>
+                                <strong>비트코인</strong>
                             </div>
 
                         </a>
                     </li>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="#eth">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/237/45/45" alt="">
+                                <img width="50px" height="50px" src="ETH.png" alt="">
                             </div>
                             <div class="description">
-                                <strong>HTML5</strong>
-                                <p>Hello</p>
+                                <strong>이더리움</strong>
                             </div>
 
                         </a>
                     </li>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="#xrp">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/684/45/45" alt="">
+                                <img width="50px" height="50px" src="XRP.png" alt="">
                             </div>
                             <div class="description">
-                                <strong>HTML5</strong>
-                                <p>Hello</p>
+                                <strong>리플</strong>
                             </div>
 
                         </a>
                     </li>
-                    <li class="item"><a href="#">
+                    <li class="item"><a href="#doge">
                             <div class="thumbnail">
-                                <img src="https://picsum.photos/id/684/45/45" alt="">
+                                <img width="50px" height="50px" src="DOGE.png" alt="">
                             </div>
                             <div class="description">
-                                <strong>HTML5</strong>
-                                <p>Hello</p>
+                                <strong>도지코인</strong>
                             </div>
 
                         </a>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상화폐 소개</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(233, 236, 241);
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+    </style>
+    <style>
+        #main_header {
+            width: 1400px;
+            margin: 0 auto;
+            height: 160px;
+            position: relative;
+        }
+
+        #top_header {
+            background-color: rgb(9, 54, 135);
+            height: 60px;
+            position: relative;
+        }
+
+        #top_header>div {
+            width: 1400px;
+            position: relative;
+            margin-left: 50px;
+        }
+
+        #main_header>#title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+        }
+
+        #top_header>div>#main_gnb {
+            position: absolute;
+            left: 200px;
+            top: 0;
+        }
+    </style>
+    <style>
+        #main_gnb>ul {
+            overflow: hidden;
+        }
+
+        #main_gnb>ul>li {
+            float: left;
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            color: rgb(165, 175, 202, .6);
+            line-height: 55px;
+            font-size: 15px;
+            margin-left: 13px;
+        }
+
+        #main_gnb>ul>li>a:hover {
+            color: white;
+        }
+
+        #main_gnb>ul>li>a:active {
+            color: white;
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'SBAggroM';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #title>h1 {
+            font-family: 'SBAggroM';
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'EliceDigitalBaeum_Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #content {
+            width: 1400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content>#main_section {
+            width: 1000px;
+            float: left;
+        }
+
+        #content>#main_aside {
+            width: 380px;
+            float: right;
+            position: fixed;
+            right: 50%;
+            top: 220px;
+            margin-right: -700px;
+            text-align: center;
+            width: 380px;
+        }
+
+        #main_section>article.main_article {
+            margin-bottom: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        #main_section>article.main_article {
+            font-family: 'EliceDigitalBaeum_Regular';
+        }
+    </style>
+    <style>
+        input:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1)~div:nth-of-type(1) {
+            display: none;
+        }
+
+        input:nth-of-type(1):checked~div:nth-of-type(1) {
+            display: block;
+        }
+
+        input:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2)~div:nth-of-type(2) {
+            display: none;
+        }
+
+        input:nth-of-type(2):checked~div:nth-of-type(2) {
+            display: block;
+        }
+
+        section.buttons {
+            overflow: hidden;
+        }
+
+        section.buttons1>label {
+            display: block;
+            float: left;
+            width: 190px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: 'EliceDigitalBaeum_Regular';
+            background-color: white;
+            color: black;
+            border-radius: 10px 0px 0px 0px;
+            border-bottom: 2px solid rgb(246, 237, 237);
+        }
+
+        section.buttons2>label {
+            display: block;
+            float: left;
+            width: 190px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: 'EliceDigitalBaeum_Regular';
+            background-color: white;
+            color: black;
+            border-radius: 0px 10px 0px 0px;
+            border-bottom: 2px solid rgb(246, 237, 237);
+        }
+
+        input:nth-of-type(1):checked~section.buttons1>label {
+            color: blue;
+            border-bottom-color: blue;
+        }
+
+        input:nth-of-type(2):checked~section.buttons2>label {
+            color: blue;
+            border-bottom-color: blue;
+        }
+    </style>
+    <style>
+        .item {
+            overflow: hidden;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 2px solid rgb(246, 237, 237);
+        }
+
+        .item:last-child {
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        .thumbnail {
+            float: left;
+            margin-left: 30px;
+        }
+
+        .description {
+            float: left;
+            text-align: center;
+            font-family: 'EliceDigitalBaeum_Regular';
+            line-height: 50px;
+        }
+
+        .description>strong {
+            display: block;
+            width: 250px;
+        }
+
+        .description>strong+p {
+            width: 250px;
+        }
+
+        .description>strong,
+        .description>strong+p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <style>
+        #main_footer {
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 100px;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+            color: gray;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top_header">
+        <div>
+            <nav id="main_gnb">
+                <ul>
+                    <li><a href="#"><b>거래소</b></a></li>
+                    <li><a href="#"><b>입출금</b></a></li>
+                    <li><a href="#"><b>투자내역</b></a></li>
+                    <li><a href="#"><b>코인동향</b></a></li>
+                    <li><a href="#"><b>고객센터</b></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header id="main_header">
+
+        <div id="title">
+            <h1><img width="45" height="45" src="abc.png" alt=""></h1>
+            <h1>가상화폐</h1>
+        </div>
+
+
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article" id="bit">
+                <h1><img width="30" height="30" src="BTC.png" alt=""> 비트코인</h1>
+                <p>비트코인은 최초로 구현된 디지털 자산입니다. 발행 및 유통을 관리하는 중앙권력이나 중간상인 없이, P2P 네트워크 기술을 이용하여 네트워크에 참여하는 사용자들이 주체적으로 화폐를
+                    발행하고 이체내용을 공동으로 관리합니다. 이를 가능하게 한 블록체인 기술을 처음으로 코인에 도입한 것이 바로 비트코인입니다. <br> <br></p>
+                <p>비트코인을 사용하는 개인과 사업자의 수는 꾸준히 증가하고 있으며, 여기에는 식당, 아파트, 법률사무소, 온라인 서비스를 비롯한 소매상들이 포함됩니다. 비트코인은 새로운 사회
+                    현상이지만 아주 빠르게 성장하고 있습니다. 이를 바탕으로 가치 증대는 물론, 매일 수백만 달러의 비트코인이 교환되고 있습니다. <br> <br> 비트코인은 디지털 자산 시장에서
+                    현재
+                    유통시가총액과 코인의 가치가 가장 크고, 거래량 또한 안정적입니다. 이더리움이 빠르게 추격하고 있지만 아직은 가장 견고한 디지털 자산 이라고 볼 수 있습니다.</p>
+            </article>
+            <article class="main_article" id="eth">
+                <h1><img width="30px" height="30px" src="ETH.png" alt=""> 이더리움</h1>
+                <p>이더리움은 블록체인에 기초해 다양한 앱 개발을 지원하는 플랫폼이며, 여기서 사용되는 디지털 자산 또한 같은 이름으로 통용됩니다. <br> <br>1. 플랫폼: 이더리움은 블록체인을
+                    활용한 모든 것을 프로그래밍할 수 있는 플랫폼입니다. 거래 기록뿐만 아니라 탈중앙화 앱(DAPP)들을 투명하게 운영할 수 있는 확장성을 제공합니다. 플랫폼은 프로그램된 계약을
+                    정확히 실행하도록 설계된 스마트 컨트랙트를 기반으로 운영됩니다. <br> <br>2. 화폐: 이더리움 플랫폼에서 이용되는 디지털 자산으로, DAPP을 만드는 개발자들과 스마트
+                    컨트랙트를 이용하고자 하는 사용자들이 필요로 합니다. <br> <br>현재 디지털 자산 시가총액 기준, 비트코인 다음으로 독보적인 위치에 있습니다. 디지털 분야에서 가장 혁명적인
+                    기술 중 하나로 평가받는 분위기이며, 실제 '월드테크놀로지(The WTN) IT S/W' 부문에서 경쟁작인 마크 저커버그의 페이스북을 제치고 수상을 한 바 있습니다.
+                </p>
+            </article>
+            <article class="main_article" id="xrp">
+                <h1><img width="30px" height="30px" src="XRP.png" alt=""> 리플</h1>
+                <p>리플코인은 금융 거래를 위한 인터넷 프로토콜인 ‘리플 프로토콜’에서 사용되는 디지털 자산이자 기초 화폐입니다. 이 코인을 매개로 전 세계의 화폐를 몇 초 내로 송금할 수 있어
+                    혁신적인 실시간 통화 거래가 가능합니다. '리플 프로토콜'이란 분산원장을 기반으로 한 ‘실시간 총액결제 시스템(RTS)’으로 국제결제시스템망(SWIFT)을 대체할 새로운 대안으로
+                    주목받고 있습니다.
+                    <br> <br>송금 시스템에 가까운 특성이 있어 일반적인 디지털 자산과는 그 구조가 다릅니다. 사용하는 합의 프로토콜도 독자적일 뿐만 아니라, 다른 코인들과 다르게 현실적으로
+                    주도권의 집중화가 있기 때문입니다. 따라서 리플의 시스템은 한정된 참여자만 분산 네트워크를 구성한다는 의미에서 프라이빗 블록체인(private blockchain)이라고 불리기도
+                    합니다.
+                    <br> <br>리플사는 총량의 62%의 코인을 보유하고 있으며, 사업 개발 단계에 따라 전략적으로 시장에 유통하고 있습니다. 리플사는 그들이 전체 유통의 반수 이상으로 보유하고
+                    있는 코인을 악용할 우려를 잠재우기 위해 암호화를 통해 보호된 조건부 날인 계정(escrow)에 리플을 넣어둔다고 합니다.
+                </p>
+            </article>
+            <article class="main_article" id="doge">
+                <h1><img width="30px" height="30px" src="DOGE.png" alt=""> 도지코인</h1>
+                <p>
+                    처음에 "joke currency"라고 불리기도 하면서 장난처럼 시작한 도지코인은 일본 개인 시바 이누를 마스코트로 사용합니다. 이 시바견은 인터넷에서 재미로 사용되던 그림이며,
+                    같은 그림이 코인의 로고로 이용되고 있습니다. 이를 통해 도지코인이 재밌고 친근한 디지털자산이라는 점을 강조합니다. 실제로 당장 홈페이지만 접속해도, 아주 쉽게 도지코인 지갑을
+                    설치할 수 있습니다.
+                </p>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked">
+            <input id="second" type="radio" name="tab">
+            <section class="buttons1">
+                <label for="first"><b>코인명</b></label>
+            </section>
+            <section class="buttons2">
+                <label for="second"><b>거래소</b></label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="#bit">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="BTC.png" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>비트코인</strong>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="item"><a href="#eth">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="ETH.png" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>이더리움</strong>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="item"><a href="#xrp">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="XRP.png" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>리플</strong>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="item"><a href="#doge">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="DOGE.png" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>도지코인</strong>
+                            </div>
+
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item"><a href="https://www.bithumb.com/">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="bit1.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>빗썸</strong>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="item"><a href="https://www.upbit.com/home">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="up1.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>업비트</strong>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="item"><a
+                            href="https://coinone.co.kr/?__cf_chl_jschl_tk__=pmd_swRrsUFIOMYpBRcr64c4pAKyVmwzt2OY7ggGaOisDnk-1635337728-0-gqNtZGzNAhCjcnBszQk9">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="1234.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>코인원</strong>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="item"><a href="https://www.binance.com/en/">
+                            <div class="thumbnail">
+                                <img width="50px" height="50px" src="123.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <strong>바이낸스</strong>
+                            </div>
+
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </aside>
+    </div>
+    <footer id="main_footer">
+        <p><br><br><br>허동화&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heodonghwa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;huhdong12@naver.com
+        </p>
+        <address>
+            <br><br><br><br><br><br><br><br>
+        </address>
+    </footer>
+
+</body>
+
+</html>
